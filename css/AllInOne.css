@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'OpenDyslexicAlta';
+    src: url('OpenDyslexicAlta-Italic.woff2') format('woff2'),
+        url('OpenDyslexicAlta-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('OpenDyslexic-Bold.woff2') format('woff2'),
+        url('OpenDyslexic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexicAlta';
+    src: url('OpenDyslexicAlta-Regular.woff2') format('woff2'),
+        url('OpenDyslexicAlta-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexicAlta';
+    src: url('OpenDyslexicAlta-BoldItalic.woff2') format('woff2'),
+        url('OpenDyslexicAlta-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('OpenDyslexic-Regular.woff2') format('woff2'),
+        url('OpenDyslexic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('OpenDyslexic-BoldItalic.woff2') format('woff2'),
+        url('OpenDyslexic-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexicMono';
+    src: url('OpenDyslexicMono-Regular.woff2') format('woff2'),
+        url('OpenDyslexicMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexicAlta';
+    src: url('OpenDyslexicAlta-Bold.woff2') format('woff2'),
+        url('OpenDyslexicAlta-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('OpenDyslexic-Italic.woff2') format('woff2'),
+        url('OpenDyslexic-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+widget-container, widget-container *{
+    font-family: Montserrat !important;
+    box-sizing: border-box;
+}
+
+/* Accessiblity text align */
+body[accessibility-text-align="left"],
+body[accessibility-text-align="left"] > :not(widget-container) *{ text-align: left !important }
+
+body[accessibility-text-align="right"],
+body[accessibility-text-align="right"] > :not(widget-container) *{ text-align: right !important }
+
+body[accessibility-text-align="center"],
+body[accessibility-text-align="center"] > :not(widget-container) *{ text-align: center !important }
+
+body[accessibility-text-align="justify"],
+body[accessibility-text-align="justify"] > :not(widget-container) *{ text-align: justify !important }
+
+/* Accessibility contrast */
+body[accessibility-contrast] > :not(widget-container) *{ filter: contrast(200%) }
+
+
+body[accessibility-text-spacing="small"],
+body[accessibility-text-spacing="small"] > :not(widget-container) *{ line-height: 90% }
+
+body[accessibility-text-spacing="medium"],
+body[accessibility-text-spacing="medium"] > :not(widget-container) *{ line-height: 170% }
+
+body[accessibility-text-spacing="big"],
+body[accessibility-text-spacing="big"] > :not(widget-container) *{ line-height: 200% }
+
+body[accessibility-text-spacing="huge"],
+body[accessibility-text-spacing="huge"] > :not(widget-container) *{ line-height: 280% }
+
+/* Accessiblity contrast */
+body[accessibility-contrast] > :not(widget-container){ filter: contrast(200%) !important }
+
+/* Accessiblity dyslexia */
+body[accessibility-dyslexia],
+body[accessibility-dyslexia] > :not(widget-container) *{ font-family: 'OpenDyslexicAlta' !important }
+
+/* Accessibility big text */
+body[accessibility-big-text],
+body[accessibility-big-text] > :not(widget-container) *{ font-size: 24px !important }
+
+/* Accessibility no animations */
+body[accessibility-no-animations],
+body[accessibility-no-animations] *,
+body[accessibility-no-animations] *::before,
+body[accessibility-no-animations] *::after,
+body[accessibility-no-animations] *:hover{
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Accessibility TTS */
+[accessibility-tts]{ outline: 1px solid red !important }
+
+/* Accessibility links */
+body[accessibility-links] > :not(widget-container) a{
+    border: 3px solid #ebb926 !important;
+    background-color: #000 !important;
+    color: #ebb926 !important;
+    font-weight: 600 !important;
+}
+
+widget-container{
+    font-size: 16px !important;
+    content: '';
+    position: fixed;
+
+    user-select: none;
+    -webkit-user-select: none;
+    
+    --widgetWidth: 30em;
+    --widgetSpacing: 2em;
+    --iconSize: 3em;
+    --widgetTextColor: #000;
+    --widgetColor: #000;
+    --widgetIconColor: #fff;
+    --widgetBackgroundColor: #0066ff;
+    --widgetButtonsFontWeight: 500;
+    --widgetButtonsToggledFontWeight: 700;
+    --widgetIconBackgroundColor: #000;
+    --widgetBorder: 0;
+    --widgetButtonsBackgroundColor: #fff;
+    --widgetButtonsTextColor: #000;
+    --widgetButtonsSpacing: .5em;
+    --widgetButtonIconSize: 2em;
+    --widgetButtonsBorder: 1px solid transparent;
+    --widgetButtonsToggledBackgroundColor: #fff;
+    --widgetButtonsToggledTextColor: #0066ff;
+    --widgetButtonsToggledBorder: 2px solid #0066ff;
+    --widgetPadding: 1em;
+    --widgetShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --widgetButtonsShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --widgetHeaderColor: #0066ff;
+    --widgetHeaderTextColor: #fff;
+
+    bottom: var(--widgetSpacing);
+    right: var(--widgetSpacing);
+    padding-bottom: calc(var(--iconSize) * 1.3);
+    display: block;
+    z-index: 1000;
+}
+
+widget-container > widget-icon{
+    display: flex;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .2em;
+    height: 1em;
+    width: 1em;
+    z-index: 1000;
+    color: var(--widgetIconColor);
+    background-color: var(--widgetIconBackgroundColor);
+    justify-content: center;
+    align-items: center;
+    font-size: var(--iconSize);
+}
+
+widget-container > widget-popup{
+    display: block;
+    
+    transition: .5s all;
+    width: var(--widgetWidth);
+    max-width: calc(100vw - var(--widgetSpacing) * 2);
+    padding: 0;
+    background-color: var(--widgetBackgroundColor);
+    border: var(--widgetBorder);
+    
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+
+    border-radius: 1.5em;
+    z-index: 999;
+    box-shadow: var(--widgetShadow);
+
+    overflow: hidden;
+}
+
+widget-container > widget-popup widget-buttons-grid{
+    display: block;
+    overflow-y: auto;
+    padding: var(--widgetPadding);
+}
+
+widget-container > widget-popup widget-button widget-value{
+    text-align: center;
+    font-weight: 700;
+    padding: .5em;
+    display: block;
+    text-transform: uppercase;
+}
+
+widget-container > widget-popup.open{
+    opacity: 1;
+    transform: translateY(0%);
+    pointer-events: all;
+}
+
+widget-popup::before{
+    font-size: 1.1em;
+    background-color: var(--widgetHeaderColor);
+    color: var(--widgetHeaderTextColor);
+    padding: 1.2em;
+    border-radius: 1.5em 1.5em 0 0;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    content: 'Opzioni accessibilita';
+}
+
+widget-popup widget-buttons-grid > widget-buttons-row{ display: flex }
+
+widget-popup widget-buttons-grid > widget-buttons-row > widget-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: var(--widgetButtonsFontWeight);
+    padding: .5em;
+    font-size: 1em;
+    flex: 1;
+    color: var(--widgetButtonsTextColor);
+    margin: var(--widgetButtonsSpacing);
+    cursor: pointer;
+    background-color: var(--widgetButtonsBackgroundColor);
+    border: var(--widgetButtonsBorder);
+    border-radius: .8em;
+    transition: .1s all;
+    box-shadow: var(--widgetButtonsShadow);
+}
+
+widget-popup widget-buttons-grid > widget-buttons-row > widget-button > ion-icon,
+widget-popup widget-buttons-grid > widget-buttons-row > widget-button > widget-button-icon{
+    font-size: var(--widgetButtonIconSize);
+    margin-bottom: .1em;
+}
+
+widget-popup widget-buttons-grid > widget-buttons-row > widget-button > widget-button-icon{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+    background-image: var(--buttonIcon);
+    width: calc(var(--widgetButtonIconSize) / 2);
+    height: calc(var(--widgetButtonIconSize) / 2);
+}
+
+widget-popup widget-buttons-grid > widget-buttons-row > widget-button.toggled{
+    background-color: var(--widgetButtonsToggledBackgroundColor);
+    color: var(--widgetButtonsToggledTextColor);
+    border: var(--widgetButtonsToggledBorder);
+    font-weight: var(--widgetButtonsToggledFontWeight);
+}

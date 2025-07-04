@@ -1,0 +1,11 @@
+/* base.css */
+*, *::before, *::after{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
